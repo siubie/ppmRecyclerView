@@ -1,10 +1,13 @@
 package id.putraprima.a03recyclerview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -27,11 +30,19 @@ public class RiwayatSekolahAdapter extends RecyclerView.Adapter<RiwayatSekolahAd
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        RiwayatSekolah riwayat = this.listRiwayat.get(position);
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+        final RiwayatSekolah riwayat = this.listRiwayat.get(position);
         holder.tingkatPendidikan.setText(riwayat.getTingkatPendidikan());
         holder.tahunLulus.setText(Integer.toString(riwayat.getTahunLulus()));
         holder.namaSekolah.setText(riwayat.getNamaSekolah());
+        holder.tahunLulus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(),NextActivity.class);
+                i.putExtra("NAMA_SEKOLAH", riwayat.getNamaSekolah());
+                view.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override

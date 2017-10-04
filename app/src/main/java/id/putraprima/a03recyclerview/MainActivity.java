@@ -33,21 +33,12 @@ public class MainActivity extends AppCompatActivity {
     private void prepareRiwayatData() {
         RiwayatSekolah riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
         riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
+        riwayat = new RiwayatSekolah(2010, "Universitas Brawijaya Malang", "Sarjana");
         riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
+        riwayat = new RiwayatSekolah(2004, "SMAN 1 Pekanbaru", "SMA");
         riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
+        riwayat = new RiwayatSekolah(2001, "SLTPN 4 Pekanbaru", "SMP");
         riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
-        riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
-        riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
-        riwayatList.add(riwayat);
-        riwayat = new RiwayatSekolah(2015, "Institut Teknologi Sepuluh Nopember", "Pasca Sarjana");
-        riwayatList.add(riwayat);
-
         mAdapter.notifyDataSetChanged();
     }
 }
